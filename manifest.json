@@ -1,5 +1,5 @@
 {
-    "name": "Trust Inspector",
+    "name": "Fake News Filter",
     "manifest_version": 3,
     "version": "1.0",
     "permissions": ["storage", "tabs", "activeTab", "scripting"],
