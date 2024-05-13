@@ -3,217 +3,253 @@
         "name": "ETtoday新聞雲",
         "company": "東森國際",
         "date": "2011年11月1日",
-        "content": "經營ETtoday新聞雲、ETtoday星光雲、ETtoday電競雲、ETtoday寵物雲四大事業體"
+        "content": "經營ETtoday新聞雲、ETtoday星光雲、ETtoday電競雲、ETtoday寵物雲四大事業體",
+        "score": ""
     },
     "nownews.com": {
         "name": "NOWnews今日新聞",
         "company": "今日傳媒股份有限公司",
         "date": "2008年4月1日",
-        "content": "前身是《東森新聞報》，現在最大股東分別是遊戲橘子、信義房屋。"
+        "content": "前身是《東森新聞報》，現在最大股東分別是遊戲橘子、信義房屋。",
+        "score": ""
     },
     "storm.mg": {
         "name": "風傳媒",
         "company": "國風傳媒有限公司",
         "date": "2014年1月15日",
-        "content": "以具備國際觀與專注揭弊聞名，老時報人出身。"
+        "content": "以具備國際觀與專注揭弊聞名，老時報人出身。",
+        "score": ""
     },
     "thenewslens.com": {
         "name": "關鍵評論網",
         "company": "關鍵評論網",
         "date": "2013年8月1日",
-        "content": "內容針對關注亞洲訊息的海外華僑、在台外籍人士等。"
+        "content": "內容針對關注亞洲訊息的海外華僑、在台外籍人士等。",
+        "score": ""
     },
     "upmedia.mg": {
         "name": "上報",
         "company": "上昇整合行銷有限公司",
         "date": "2016年7月15日",
-        "content": "以調查採訪與專題新聞為主，電競老闆。"
+        "content": "以調查採訪與專題新聞為主，電競老闆。",
+        "score": ""
     },
     "peoplenews.tw": {
         "name": "民報",
         "company": "民報文化事業股份有限公司",
         "date": "2014年4月15日",
-        "content": "自稱是最具有台灣主體意識的媒體，立場支持以台灣名義進入國際社會。"
+        "content": "自稱是最具有台灣主體意識的媒體，立場支持以台灣名義進入國際社會。",
+        "score": ""
     },
     "讀報": {
         "name": "讀報",
         "company": "民視論壇中心",
         "date": "2018年2月8日",
-        "content": "以獨家報導及專欄投書做為主打內容。"
+        "content": "以獨家報導及專欄投書做為主打內容。",
+        "score": ""
     },
     "cmmedia.com.tw": {
         "name": "信傳媒",
         "company": "人誠文創股份有限公司",
         "date": "2016年5月11日",
-        "content": "以政治和商業新聞為主。"
+        "content": "以政治和商業新聞為主。",
+        "score": ""
     },
     "壹週刊": {
         "name": "壹週刊",
         "company": "壹傳媒",
         "date": "2018年4月5日",
-        "content": "2001年在台創刊，2018年停止發刊，轉為網路媒體，2020年2月29日宣布關站。"
+        "content": "2001年在台創刊，2018年停止發刊，轉為網路媒體，2020年2月29日宣布關站。",
+        "score": ""
     },
     "twreporter.org": {
         "name": "報導者",
         "company": "財團法人報導者文化基金會",
         "date": "2015年9月1日",
-        "content": "是台灣唯一非營利網路媒體，致力於公共議題的深度調查報導。"
+        "content": "是台灣唯一非營利網路媒體，致力於公共議題的深度調查報導。",
+        "score": ""
     },
     "news.cnyes.com": {
         "name": "鉅亨網",
         "company": "Anuenue集團",
         "date": "2000年5月9日",
-        "content": "提供國內外重大財經新聞、理財建議，及股票、基金、外匯和期貨等理財商品即時報價。"
+        "content": "提供國內外重大財經新聞、理財建議，及股票、基金、外匯和期貨等理財商品即時報價。",
+        "score": ""
     },
     "newsmarket.com.tw": {
         "name": "上下游新聞市集",
         "company": "上下游新聞市集",
         "date": "2011年9月3日",
-        "content": "是一個臺灣的獨立媒體、農產品銷售平台及社會企業，其主要關注議題為農業及友善土地。"
+        "content": "是一個臺灣的獨立媒體、農產品銷售平台及社會企業，其主要關注議題為農業及友善土地。",
+        "score": ""
     },
     "my-formosa.com": {
         "name": "美麗島電子報",
         "company": "美麗島電子報",
         "date": "2009年12月10日",
-        "content": "是一個屬於民主進步黨美麗島系的媒體。"
+        "content": "是一個屬於民主進步黨美麗島系的媒體。",
+        "score": ""
     },
     "newtalk.tw": {
         "name": "新頭殼",
         "company": "先驅媒體社會企業股份有限公司",
         "date": "2009年9月1日",
-        "content": "自詡為「一個有思考力的獨立(官方傳聲筒)媒體」，也是屬於民主進步黨的媒體。"
+        "content": "自詡為「一個有思考力的獨立(官方傳聲筒)媒體」，也是屬於民主進步黨的媒體。",
+        "score": ""
     },
     "fountmedia.io": {
         "name": "放言",
         "company": "放言科技傳媒股份有限公司",
         "date": "2018年4月20日",
-        "content": "透過權威(周玉蔻)專欄寫作揭露新聞內幕。"
+        "content": "透過權威(周玉蔻)專欄寫作揭露新聞內幕。",
+        "score": ""
     },
     "taronews.tw": {
         "name": "芋傳媒",
         "company": "芋頭國際文化股份有限公司",
         "date": "2017年8月22日",
-        "content": "透過網路科技與社群媒體的力量，傳遞台灣人長期建構起來的多元價值與台灣認同，同時也能夠傳播更在地、更國際、更多元也更真實的聲音，也是屬於民主進步黨的媒體。"
+        "content": "透過網路科技與社群媒體的力量，傳遞台灣人長期建構起來的多元價值與台灣認同，同時也能夠傳播更在地、更國際、更多元也更真實的聲音，也是屬於民主進步黨的媒體。",
+        "score": ""
     },
     "standpost.dopost.com": {
         "name": "眾報",
         "company": "立傳媒",
         "date": "2015年2月21日",
-        "content": "以獨家報導及專題影音做為主打內容。"
+        "content": "以獨家報導及專題影音做為主打內容。",
+        "score": ""
     },
     "eatnews.net": {
         "name": "呷新聞",
         "company": "政經傳媒",
         "date": "2019年6月4日",
-        "content": "民視論壇中心旗下媒體《讀報》遭關閉後，原班人馬建立的網路媒體。"
+        "content": "民視論壇中心旗下媒體《讀報》遭關閉後，原班人馬建立的網路媒體。",
+        "score": ""
     },
     "taiwannews.com.tw": {
         "name": "台灣英文新聞",
         "company": "英文台灣日報",
         "date": "2015年3月1日",
-        "content": "台灣英文新聞從2015年3月1日起紙本停刊，全面投入網路經營。"
+        "content": "台灣英文新聞從2015年3月1日起紙本停刊，全面投入網路經營。",
+        "score": ""
     },
     "kairos.news": {
         "name": "風向新聞",
         "company": "社團法人中華愛傳資訊媒體發展協會",
         "date": "2015年8月1日",
-        "content": "風向新聞是略偏基督教右派、宣稱自己是反「腥羶色、仇恨、謊言」的媒體，曾因大量反同性婚姻的報導而受爭議。"
+        "content": "風向新聞是略偏基督教右派、宣稱自己是反「腥羶色、仇恨、謊言」的媒體，曾因大量反同性婚姻的報導而受爭議。",
+        "score": ""
     },
     "heho.com.tw": {
         "name": "Heho健康",
         "company": "醫鼎科技股份有限公司",
         "date": "2017年9月",
-        "content": "醫鼎科技董事長張璨創建的專業健康媒體。"
+        "content": "醫鼎科技董事長張璨創建的專業健康媒體。",
+        "score": ""
     },
     "yimedia.com.tw": {
         "name": "壹傳媒",
         "company": "毅傳媒控股股份有限公司",
         "date": "2019年12月",
-        "content": "巫俊毅創建的網路媒體，大量雇用前台灣壹週刊、鏡週刊、時報周刊及其他小媒體的被退役記者。因經營不善發不出薪資而下台，由宣昶有接手並向巫提出告訴。自2022年開始逐步將粉絲專頁及新聞網站從《毅傳媒》改為《壹傳媒》。因涉冒用香港黎智英所創建的知名《壹傳媒》集團名號以攔截新聞流量而飽受批評。"
+        "content": "巫俊毅創建的網路媒體，大量雇用前台灣壹週刊、鏡週刊、時報周刊及其他小媒體的被退役記者。因經營不善發不出薪資而下台，由宣昶有接手並向巫提出告訴。自2022年開始逐步將粉絲專頁及新聞網站從《毅傳媒》改為《壹傳媒》。因涉冒用香港黎智英所創建的知名《壹傳媒》集團名號以攔截新聞流量而飽受批評。",
+        "score": ""
     },
     "listencontent.com.tw": {
         "name": "ListenContent有感說",
         "company": "感說創意股份有限公司",
         "date": "2019年11月",
-        "content": "Allen陳仕宇創建的網路有聲知識媒體，網站中匯集各領域專精人士，如職人、中小微型企業主在有感說開設有聲知識節目，分享自身經驗、知識分享等內容。期待藉由聽知識提升台灣人軟實力，也提供台灣優質品牌、專家們有更多的發聲空間。"
+        "content": "Allen陳仕宇創建的網路有聲知識媒體，網站中匯集各領域專精人士，如職人、中小微型企業主在有感說開設有聲知識節目，分享自身經驗、知識分享等內容。期待藉由聽知識提升台灣人軟實力，也提供台灣優質品牌、專家們有更多的發聲空間。",
+        "score": ""
     },
     "intrendlog.org": {
         "name": "潮流誌",
         "company": "潮流誌 InTrend Log",
         "date": "2020年1月",
-        "content": "潮流誌，一個嶄新的生活風格新聞平台，有質感、溫度、深度、態度的媒體，生活、風格、時尚、美旅、娛樂、藝文，文青媒體。"
+        "content": "潮流誌，一個嶄新的生活風格新聞平台，有質感、溫度、深度、態度的媒體，生活、風格、時尚、美旅、娛樂、藝文，文青媒體。",
+        "score": ""
     },
     "taiwanplus.com": {
         "name": "TaiwanPlus",
         "company": "財團法人中央通訊社",
         "date": "2021年8月30日",
-        "content": "中華民國政府委託以英語為主的影音平台，由中華民國文化部設立、中央通訊社主責執行的「國際影音串流平台計畫」，正式定名為「Taiwan+」，是台灣首個向國際觀眾宣揚台灣的英語影音新聞和節目的平台。"
+        "content": "中華民國政府委託以英語為主的影音平台，由中華民國文化部設立、中央通訊社主責執行的「國際影音串流平台計畫」，正式定名為「Taiwan+」，是台灣首個向國際觀眾宣揚台灣的英語影音新聞和節目的平台。",
+        "score": ""
     },
     "thehubnews.net": {
         "name": "新頭條",
         "company": "隆豪多媒體",
         "date": "2020年3月9日",
-        "content": "《新頭條》TheHubNews是多元呈現的網路媒體，由一群資深的新聞人共組採訪、編輯團隊，以專業、客觀、公正的原則與精神，圖文並茂地為閱聽人提供高可讀性的服務。同時更注重的是縣市政府利民福民政策、公益性及環保相關議題。"
+        "content": "《新頭條》TheHubNews是多元呈現的網路媒體，由一群資深的新聞人共組採訪、編輯團隊，以專業、客觀、公正的原則與精神，圖文並茂地為閱聽人提供高可讀性的服務。同時更注重的是縣市政府利民福民政策、公益性及環保相關議題。",
+        "score": ""
     },
     "aspn.media": {
         "name": "ASPN",
         "company": "亞太社媒新聞網",
         "date": "2021年1月4日",
-        "content": "\"聚焦社群生活觀點，影音圖文互動型態，搭配自媒體優勢、新媒體平台，讓社群媒體成為第4.5權，與閱聽眾共創不同3D視野。\""
+        "content": "\"聚焦社群生活觀點，影音圖文互動型態，搭配自媒體優勢、新媒體平台，讓社群媒體成為第4.5權，與閱聽眾共創不同3D視野。\"",
+        "score": ""
     },
     "contentplatform.info": {
         "name": "報新聞",
         "company": "百仕文化科技股份有限公司",
         "date": "2020年3月28日",
-        "content": "《報新聞》Mega News是新興的網路媒體，由一群資深的媒體人共同採訪、編輯，以專業、客觀、公正的原則與精神提供媒體資訊。"
+        "content": "《報新聞》Mega News是新興的網路媒體，由一群資深的媒體人共同採訪、編輯，以專業、客觀、公正的原則與精神提供媒體資訊。",
+        "score": ""
     },
     "rwnews.tw": {
         "name": "菱傳媒",
         "company": "尚同傳媒資訊股份有限公司",
         "date": "2021年11月22日",
-        "content": "《菱傳媒》是台灣一間純政治、軍事的網路媒體；RW News係指Right和Wrong，是菱記者面對真相對錯時，絕對態度清楚。主打調查報導、獨家幕後和民調分析。"
+        "content": "《菱傳媒》是台灣一間純政治、軍事的網路媒體；RW News係指Right和Wrong，是菱記者面對真相對錯時，絕對態度清楚。主打調查報導、獨家幕後和民調分析。",
+        "score": ""
     },
     "bnext.com.tw": {
         "name": "數位時代",
         "company": "巨思媒體股份有限公司",
         "date": "1999年7月1日",
-        "content": "台灣第一個以網路科技和創新創業為報導核心的數位科技媒體，長期聚焦最新的科技、創新創業、新經濟和新商業模式等議題。"
+        "content": "台灣第一個以網路科技和創新創業為報導核心的數位科技媒體，長期聚焦最新的科技、創新創業、新經濟和新商業模式等議題。",
+        "score": ""
     },
     "tw.nextapple.com": {
         "name": "壹蘋新聞網",
         "company": "龍丞創意有限公司",
         "date": "2022年9月1日",
-        "content": "由前《蘋果新聞網》團隊組成的網絡新聞媒體，以「壹週刊」的「壹」及「蘋果新聞網」的「蘋」命名。"
+        "content": "由前《蘋果新聞網》團隊組成的網絡新聞媒體，以「壹週刊」的「壹」及「蘋果新聞網」的「蘋」命名。",
+        "score": ""
     },
     "tdn.today": {
         "name": "TDN.TODAY善思新聞網",
         "company": "學學善思有限公司",
         "date": "2023年1月1日",
-        "content": "TDN.TODAY 提供即時新聞以及豐富的生活財經、觀光文化、政治焦點、地方觀察、健康樂活、社會紀實、科技環境、專題策畫、影音專區、育樂流行新聞，以最即時、多元的內容，滿足社群世代的需求。"
+        "content": "TDN.TODAY 提供即時新聞以及豐富的生活財經、觀光文化、政治焦點、地方觀察、健康樂活、社會紀實、科技環境、專題策畫、影音專區、育樂流行新聞，以最即時、多元的內容，滿足社群世代的需求。",
+        "score": ""
     },
     "lai-media.net": {
         "name": "記者新聞網",
         "company": "賴傳媒有限公司",
         "date": "2022年5月12日",
-        "content": "自己的新聞自己救，公司是由多民記者成立，給網友提供爆料與回報訊息。 在社群提供最即時的新聞供電視台、網路媒體使用。"
+        "content": "自己的新聞自己救，公司是由多民記者成立，給網友提供爆料與回報訊息。 在社群提供最即時的新聞供電視台、網路媒體使用。",
+        "score": ""
     },
     "healingdaily.com.tw": {
         "name": "療日子_健康生活網",
         "company": "朵朵雲網絡行銷",
         "date": "2020年10月23日",
-        "content": "台灣最專業的健康生活網站，鎖定多元健康議題發展，並與專業醫事人員合作提供精確的醫療資訊，同時提供影音採訪話題拍攝，十分受到健康愛好者喜愛。"
+        "content": "台灣最專業的健康生活網站，鎖定多元健康議題發展，並與專業醫事人員合作提供精確的醫療資訊，同時提供影音採訪話題拍攝，十分受到健康愛好者喜愛。",
+        "score": ""
     },
     "healthmedia.com.tw": {
         "name": "NOW健康",
         "company": "健康傳媒國際事業有限公司",
         "date": "2008年2月1日",
-        "content": "前身是《中時健康網》，致力於健康智庫的內容生產與網路搜尋優化，提供優質、多元、實用的健康生活資訊，並有百位名醫、專家駐站，成為最受信賴的全方位健康新聞平台。"
+        "content": "前身是《中時健康網》，致力於健康智庫的內容生產與網路搜尋優化，提供優質、多元、實用的健康生活資訊，並有百位名醫、專家駐站，成為最受信賴的全方位健康新聞平台。",
+        "score": ""
     },
     "pinview.com.tw": {
         "name": "品觀點",
         "company": "品觀點傳媒科技股份有限公司",
         "date": "2019年6月1號",
-        "content": "以熱門議題相乘話題人物激盪出最高CP值效益為經營核心，將每一分資源發揮的淋漓盡致，產出高效能的話題性。 從新聞的獨到觀點、多元節目製作、專家學者文章...等多型態的經營，打造出《品觀點》獨一無二的品牌形象。"
+        "content": "以熱門議題相乘話題人物激盪出最高CP值效益為經營核心，將每一分資源發揮的淋漓盡致，產出高效能的話題性。 從新聞的獨到觀點、多元節目製作、專家學者文章...等多型態的經營，打造出《品觀點》獨一無二的品牌形象。",
+        "score": ""
     },
 
 
@@ -221,414 +257,497 @@
         "name": "東森新聞",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "nexttv.com.tw": {
         "name": "壹電視",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "ctitv.com.tw": {
         "name": "中天新聞",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "tvbs.com.tw": {
         "name": "TVBS",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "chinatimes.com": {
         "name": "中時新聞網",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "cna.com.tw": {
         "name": "中央社",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "ftvnews.com.tw": {
         "name": "民視新聞",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "bcc.com.tw": {
         "name": "中廣新聞網",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "ltn.com.tw": {
         "name": "自由時報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "cdns.com.tw": {
         "name": "中華日報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "new7.storm.mg": {
         "name": "新新聞",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "setn.com": {
         "name": "三立新聞網",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "ctv.com.tw": {
         "name": "中視全球資訊網",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "news.pts.org.tw": {
         "name": "公視新聞網",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "ydn.com.tw": {
         "name": "青年日報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "tw.news.yahoo.com": {
         "name": "Yahoo奇摩新聞",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "parenting.com.tw": {
         "name": "親子天下",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "udn.com": {
         "name": "聯合新聞網",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "cts.com.tw": {
         "name": "華視新聞網",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "cw.com.tw": {
         "name": "天下雜誌",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "theinitium.com": {
         "name": "端傳媒",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "eventsinfocus.org": {
         "name": "焦點事件",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "innews.pts.org.tw": {
         "name": "獨立特派員",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "ustw.watch": {
         "name": "美國台灣觀測站",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "kornews.org": {
         "name": "韓半島新聞台",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "opinion.cw.com.tw": {
         "name": "獨立評論",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "tfc-taiwan.org.tw": {
         "name": "台灣事實查核中心",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "taiwanhot.net": {
         "name": "台灣好新聞",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "cofacts.tw": {
         "name": "Cofacts 真的假的",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "mygopen.com": {
         "name": "MyGoPen",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "whogovernstw.org": {
         "name": "菜市場政治學",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "plainlaw.me": {
         "name": "法律白話文運動",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "taiwanbar.cc": {
         "name": "台灣Bar",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "pansci.asia": {
         "name": "PanSci 泛科學",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "kknews.cc": {
         "name": "每日頭條",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
+    },
+    "read01.com": {
+        "name": "壹讀",
+        "company": "",
+        "date": "",
+        "content": "",
+        "score": ""
     },
     "readnews.tw": {
         "name": "ReadNews 讀新聞",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "iqiqis.com": {
         "name": "琦琦看新聞",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "nooho.net": {
         "name": "怒吼",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "xuehua.us": {
         "name": "雪花新聞",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "coco01.net": {
         "name": "COCO01",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "taiwandaily.net": {
         "name": "美洲台灣日報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "taiwantimes.com.tw": {
         "name": "臺灣時報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "southnews.com.tw": {
         "name": "南方快報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "money.udn.com": {
         "name": "經濟日報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "ctee.com.tw": {
         "name": "工商時報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "idn.com.tw": {
         "name": "自立晚報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "cdn.com.tw": {
         "name": "民眾日報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "tssdnews.com.tw": {
         "name": "台灣新生報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "epochtimes.com.tw": {
         "name": "台灣大紀元時報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "e-info.org.tw": {
         "name": "環境資訊中心",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "limedia.tw": {
         "name": "國語日報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "merit-times.com.tw": {
         "name": "人間福報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "epaper.vac.gov.tw/admin/web": {
         "name": "榮光電子報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "metrotimes.com.tw": {
         "name": "都會時報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "ksnews.com.tw": {
         "name": "更生日報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "ltsports.com.tw": {
         "name": "麗台運動報",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "mactv.com.tw": {
         "name": "僑委會宏觀新聞",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "rti.org.tw": {
         "name": "中央廣播電台",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "ttv.com.tw/News": {
         "name": "台視新聞網",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "news.cts.com.tw": {
         "name": "華視新聞網",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "civilmedia.tw": {
         "name": "公民行動影音記錄資料庫",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "news.ftv.com.tw": {
         "name": "民視新聞網",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "eracom.com.tw/EraNews": {
         "name": "年代新聞",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "gotv.ctitv.com.tw": {
         "name": "中天快點TV",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "gtv.com.tw": {
         "name": "八大電視台",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "ustv.com.tw": {
         "name": "非凡新聞台",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "daai.tv": {
         "name": "大愛電視台",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "k5news68.com": {
         "name": "K5傳媒",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
     },
     "coolloud.org.tw": {
         "name": "苦勞網",
         "company": "",
         "date": "",
-        "content": ""
+        "content": "",
+        "score": ""
+    },
+    "ourisland.pts.org.tw": {
+        "name": "我們的島",
+        "company": "",
+        "date": "",
+        "content": "",
+        "score": ""
     }
 }

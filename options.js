@@ -4,13 +4,15 @@ const saveButton = document.getElementById('save-button');
 saveButton.addEventListener('click', () => {
   const apiKey = apiKeyInput.value.trim();
   if (apiKey) {
-    localStorage.setItem('geminiApiKey', apiKey);
-    alert('API key saved successfully!');
+    chrome.storage.local.set({'geminiApiKey': apiKey}, function() {
+      alert('API key saved successfully!');
+    });
   }
 });
 
 // Load API key from local storage when the options page loads
-const storedApiKey = localStorage.getItem('geminiApiKey');
-if (storedApiKey) {
-  apiKeyInput.value = storedApiKey;
-}
+chrome.storage.local.get('geminiApiKey', function(result) {
+  if (result.geminiApiKey) {
+    apiKeyInput.value = result.geminiApiKey;
+  }
+});
