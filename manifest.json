@@ -1,5 +1,5 @@
 {
-    "name": "Fake News Filter",
+    "name": "假新聞檢查器",
     "manifest_version": 3,
     "version": "1.0",
     "permissions": ["storage", "tabs", "activeTab", "scripting"],
