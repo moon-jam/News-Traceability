@@ -22,7 +22,9 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
                 if (brand_info) {
                     // let content_info = processGeminiInfo(generateContent(combineContentWithPrompt()));
                     chrome.storage.local.get(fullUrl, function(result) {
-                        if (!result[fullUrl].media) {
+                        if (result[fullUrl] && result[fullUrl].media) {
+                            console.log('Search information already exists, not updating.');
+                        } else {
                             let news_info = {};
                             news_info[fullUrl] = {"media":brand_info};
                             console.log("Information for", fullUrl + ":", news_info);
@@ -30,12 +32,10 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
                             chrome.storage.local.set(news_info, function() {
                                 console.log('Search information saved.');
                             });
-                        } else {
-                            console.log('Search information already exists, not updating.');
                         }
                     });
                 } else {
-                    console.log("No brand information found for", fullUrl);
+                    console.log("No brand information found for", domain);
                 }
             })
             .catch(error => {
@@ -67,18 +67,19 @@ function processGeminiInfo(data) {
 chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     getActiveTabUrl().then(url => {
         let fullUrl = url;
-        console.log("clear api sdfasdfinformation for", fullUrl);
         chrome.storage.local.get(fullUrl, async function(result) {
             let info = result[fullUrl];
             console.log("ori information for", fullUrl + ":", info);
-            info = info.media;
-            console.log("process information for", fullUrl + ":", info);
-            let dataToSave = {};
-            dataToSave[fullUrl] = info;
-            console.log("clear information for", fullUrl + ":", dataToSave);
-            chrome.storage.local.set(dataToSave, async function() {
-                console.log('clear api info.');
-            });
+            if(info && info.media){
+                info = info.media;
+                console.log("process information for", fullUrl + ":", info);
+                let dataToSave = {};
+                dataToSave[fullUrl] = info;
+                console.log("clear information for", fullUrl + ":", dataToSave);
+                chrome.storage.local.set(dataToSave, async function() {
+                    console.log('clear api info.');
+                });
+            }
         });
     });
     

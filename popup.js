@@ -42,3 +42,9 @@ ${info.emotion ? info.emotion : "Processing" + dots}`;
         });
     }, 400); // Update every 1 second
 });
+
+chrome.storage.local.get('geminiApiKey', function(result) {
+    if (!result.geminiApiKey) {
+        alert('請輸入Gemini API Key!');
+    }
+});
