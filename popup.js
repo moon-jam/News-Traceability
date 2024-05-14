@@ -13,17 +13,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (info) {
                     outputText.innerHTML = 
 `<span style="font-size: 20px; font-weight: bold; line-height: 2;">哪間媒體、誰的媒體？</span>
-媒體名稱: ${info.media.name || "Processing" + dots}
-所屬公司: ${info.media.company || "Processing" + dots}
-上線日期: ${info.media.date || "Processing" + dots}
-相關訊息: ${info.media.content || "Processing" + dots}
-可信度分數: ${info.media.score || "Processing" + dots}
+媒體名稱: ${info.media ? info.media.name : "Processing" + dots}
+所屬公司: ${info.media ? info.media.company : "Processing" + dots}
+上線日期: ${info.media ? info.media.date : "Processing" + dots}
+相關訊息: ${info.media ? info.media.content : "Processing" + dots}
+可信度分數: ${info.media ? info.media.score : "Processing" + dots}
 
 <span style="font-size: 20px; font-weight: bold; line-height: 2;">誰寫的報導？</span>
-${info.author || "Processing" + dots}
+${info.author ? info.author : "Processing" + dots}
 
 <span style="font-size: 20px; font-weight: bold; line-height: 2;">誰給的消息？</span>
-${info.source || "Processing" + dots}
+${info.source ? info.source : "Processing" + dots}
 
 <span style="font-size: 20px; font-weight: bold; line-height: 2;">何時的新聞？</span>
 ${info.when ? info.when.happen : "Processing" + dots}

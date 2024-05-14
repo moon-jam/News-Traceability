@@ -22,7 +22,7 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
                 if (brand_info) {
                     // let content_info = processGeminiInfo(generateContent(combineContentWithPrompt()));
                     chrome.storage.local.get(fullUrl, function(result) {
-                        if (!result[fullUrl]) {
+                        if (!result[fullUrl].media) {
                             let news_info = {};
                             news_info[fullUrl] = {"media":brand_info};
                             console.log("Information for", fullUrl + ":", news_info);
@@ -65,6 +65,23 @@ function processGeminiInfo(data) {
 
 
 chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
+    getActiveTabUrl().then(url => {
+        let fullUrl = url;
+        console.log("clear api sdfasdfinformation for", fullUrl);
+        chrome.storage.local.get(fullUrl, async function(result) {
+            let info = result[fullUrl];
+            console.log("ori information for", fullUrl + ":", info);
+            info = info.media;
+            console.log("process information for", fullUrl + ":", info);
+            let dataToSave = {};
+            dataToSave[fullUrl] = info;
+            console.log("clear information for", fullUrl + ":", dataToSave);
+            chrome.storage.local.set(dataToSave, async function() {
+                console.log('clear api info.');
+            });
+        });
+    });
+    
     let websiteContent = "";
     websiteContent = message.websiteContent;
     let response = await fetch(chrome.runtime.getURL('prompt.txt'));
@@ -77,7 +94,7 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
         const modelId = "gemini-1.0-pro";
     
         if (query && apiKey) {
-            // console.log("HAHA ", query, apiKey);
+            console.log("HAHA ", query);
             const response = await fetch(`https://generativelanguage.googleapis.com/v1/models/${modelId}:generateContent`, {
                 method: "POST",
                 headers: {

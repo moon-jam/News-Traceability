@@ -1,5 +1,5 @@
 {
-    "name": "假新聞檢查器",
+    "name": "新聞產銷履歷",
     "manifest_version": 3,
     "version": "1.0",
     "permissions": ["webNavigation", "storage", "tabs", "activeTab", "scripting"],
