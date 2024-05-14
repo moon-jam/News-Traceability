@@ -1,5 +1,5 @@
 async function getActiveTabUrl() {
-    const tabs = await chrome.tabs.query({ active: true });
+    const tabs = await chrome.tabs.query({ active: true, currentWindow: true});
     return tabs[0].url;
 }
 
@@ -87,7 +87,7 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     websiteContent = message.websiteContent;
     let response = await fetch(chrome.runtime.getURL('prompt.txt'));
     let promptText = await response.text();
-    let query = `${promptText.trim()}\n${websiteContent.trim()}\n}}`;
+    let query = `${promptText}\n${websiteContent}\n}}`;
 
     chrome.storage.local.get('geminiApiKey', async function(result) {
         apiKey = result.geminiApiKey;
