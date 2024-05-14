@@ -12,7 +12,22 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     }
 });
 
-document.querySelectorAll('h1').forEach(element => {
+
+const h1Elements = document.querySelectorAll('h1');
+
+// 選擇所有字體大小大於 27px 的元素
+// 因為有些新聞網站標題沒有用 h1 標籤... so bad the reporter
+const largeFontElements = Array.from(document.querySelectorAll('body *')).filter(element => {
+    const fontSize = parseFloat(window.getComputedStyle(element).fontSize);
+    return fontSize > 27; // 修改數字以符合需求
+});
+
+// 結合兩個節點列表
+const combinedElements = Array.from(new Set([...h1Elements, ...largeFontElements]));
+
+console.log("Elements:", combinedElements);
+
+combinedElements.forEach(element => {
     element.style.position = 'relative';  // 確保提示框能正確顯示
     let content = "";
 

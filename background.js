@@ -1,5 +1,5 @@
 async function getActiveTabUrl() {
-    const tabs = await chrome.tabs.query({ active: true, currentWindow: true});
+    const tabs = await chrome.tabs.query({ active: true });
     return tabs[0].url;
 }
 
