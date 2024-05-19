@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dots = (dots.length < 3) ? (dots + '.') : '.';
         chrome.tabs.query({ active: true }, function(tabs) {
             let currentUrl = tabs[0].url;
-            console.log("Current URL:", currentUrl);
+            // console.log("Current URL:", currentUrl);
             chrome.storage.local.get(currentUrl, function(result) {
                 let info = result[currentUrl];
                 if (info) {

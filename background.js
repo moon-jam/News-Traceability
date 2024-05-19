@@ -46,9 +46,8 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
 }, {url: [{schemes: ['http', 'https']}]});
 
 function processGeminiInfo(data) {
-    data = data.replace(/(\{\{\n|\n\}\})/g, '');
-    data = data.replace(/\n{2,}/g, '\n');
-    let lines = data.split('\n');
+    data = data.replace(/(\{\{|\}\})/g, '').trim();
+    let lines = data.split('\n\n');
     let info = {
         "author": lines[0], 
         "where": lines[1], 
