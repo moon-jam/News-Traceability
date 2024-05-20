@@ -1,3 +1,5 @@
+let isEnabled = false;
+
 async function getActiveTabUrl() {
     const tabs = await chrome.tabs.query({ active: true });
     return tabs[0].url;
@@ -66,16 +68,17 @@ function processGeminiInfo(data) {
 
 
 chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
+    if(!message.websiteContent) return;
     getActiveTabUrl().then(url => {
         let fullUrl = url;
         chrome.storage.local.get(fullUrl, async function(result) {
             let info = result[fullUrl];
             console.log("ori information for", fullUrl + ":", info);
-            if(info && info.media){
-                info = info.media;
-                console.log("process information for", fullUrl + ":", info);
+            if(info){
+                let media = info.media;
+                console.log("process information for", fullUrl + ":", media);
                 let dataToSave = {};
-                dataToSave[fullUrl] = info;
+                dataToSave[fullUrl] = {media};
                 console.log("clear information for", fullUrl + ":", dataToSave);
                 chrome.storage.local.set(dataToSave, async function() {
                     console.log('clear api info.');

@@ -1,4 +1,9 @@
-window.onload = function() {
+let isEnabled = false;
+
+chrome.storage.local.get('isEnabled', function(data) {
+    isEnabled = data.isEnabled;
+    console.log("is enabled:", isEnabled);
+    if(!isEnabled) return;
     generateTraceability();
     let targetNode = document.querySelector('head');
     let config = { childList: true, subtree: true, characterData: true };
@@ -14,12 +19,12 @@ window.onload = function() {
 
     let observer = new MutationObserver(callback);
     observer.observe(targetNode, config);
-};
-
+});
 
 let generateTraceability = function() {
 
     let bodyText = document.body.innerText;
+    console.log("Body text:", bodyText);
     chrome.runtime.sendMessage({websiteContent: bodyText});
 
     const h1Elements = document.querySelectorAll('h1');

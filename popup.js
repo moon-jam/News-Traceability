@@ -1,7 +1,25 @@
-const regenerate = document.getElementById('regenerate-button');
-const outputText = document.getElementById('output-text');
+const toggleSwitch = document.getElementById('toggle-switch');
+const switchLabel = document.getElementById('switch-label');
+let isEnabled = toggleSwitch.checked;
 
-document.addEventListener('DOMContentLoaded', function() {
+toggleSwitch.addEventListener('change', function() {
+    chrome.storage.local.set({ isEnabled: toggleSwitch.checked });
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+        chrome.tabs.update(tabs[0].id, { url: tabs[0].url });
+    });
+    location.reload();
+});
+
+chrome.storage.local.get('isEnabled', function(data) {
+    isEnabled = data.isEnabled;
+    toggleSwitch.checked = isEnabled;
+    console.log("is enabled:", isEnabled);
+    if(!isEnabled) return;
+
+    const regenerate = document.getElementById('regenerate-button');
+    const outputText = document.getElementById('output-text');
+
+    console.log("is enabled:", isEnabled);
     let dots = '';
     let intervalId = setInterval(function() {
         dots = (dots.length < 3) ? (dots + '.') : '.';
