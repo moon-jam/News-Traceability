@@ -152,11 +152,24 @@ let generateTraceability = function() {
     });
 };
 
-// due to something strange, it is not working
-chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-    if (message.getWebsiteContent) {
-        console.log("Content received:", message);
-        let bodyText = document.body.innerText;
-        sendResponse ({websiteContent: bodyText});
-    }
-});
+// // due to something strange, it is not working
+// chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+//     if (message.getWebsiteContent) {
+//         console.log("Content received:", message);
+//         let bodyText = document.body.innerText;
+//         sendResponse ({websiteContent: bodyText});
+//     }
+// });
+
+setInterval(function() {
+    let still_loading = false;
+    chrome.storage.local.get('regenerate', function(data) {
+        if(data.regenerate && !still_loading){
+            console.log("Regenerate!");
+            chrome.storage.local.set({ regenerate: false });
+            still_loading = true;
+            if(isEnabled) generateTraceability();
+            still_loading = false;
+        }
+    });
+}, 100); 

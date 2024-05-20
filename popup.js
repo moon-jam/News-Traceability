@@ -1,5 +1,6 @@
 const toggleSwitch = document.getElementById('toggle-switch');
 const switchLabel = document.getElementById('switch-label');
+const regenerateButton = document.getElementById('regenerate-button');
 let isEnabled = toggleSwitch.checked;
 
 toggleSwitch.addEventListener('change', function() {
@@ -8,6 +9,14 @@ toggleSwitch.addEventListener('change', function() {
         chrome.tabs.update(tabs[0].id, { url: tabs[0].url });
     });
     location.reload();
+});
+
+regenerateButton.addEventListener('click', function() {
+    chrome.storage.local.set({ regenerate: true });
+});
+
+document.getElementById("options-button").addEventListener("click", () => {
+    chrome.runtime.openOptionsPage();
 });
 
 chrome.storage.local.get('isEnabled', function(data) {
@@ -63,6 +72,8 @@ ${info.emotion ? info.emotion : "Processing" + dots}`;
 
 chrome.storage.local.get('geminiApiKey', function(result) {
     if (!result.geminiApiKey) {
-        alert('請輸入Gemini API Key!');
+        if (confirm('請輸入Gemini API Key! 點擊 "OK" 以輸入。')) {
+            chrome.runtime.openOptionsPage();
+        }
     }
 });

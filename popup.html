@@ -10,7 +10,7 @@
     <div style="display: flex; justify-content: space-between; align-items: center;">
       <h2><a href="https://github.com/moon-jam/News-Traceability" target="_blank">新聞產銷履歷</a></h2>
       <label class="switch">
-        <input type="checkbox" id="toggle-switch">
+        <input type="checkbox" id="toggle-switch" checked>
         <span class="slider round">
           <span id="switch-status"></span>
         </span>
@@ -18,7 +18,8 @@
     </div>
     <div id="output-area">
       <pre id="output-text"></pre>
-      <!-- <button id="regenerate-button">重新檢查</button> -->
+      <button id="regenerate-button">重新生成新聞履歷</button>
+      <button id="options-button">設定Gemini API Key</button> 
     </div>
   </div>
 
