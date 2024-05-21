@@ -104,7 +104,7 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
         if (query && apiKey) {
             getActiveTabUrl().then(async url => {
                 let fullUrl = url;
-                console.log("HAHA ", query, fullUrl);
+                // console.log("HAHA ", query, fullUrl);
                 const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent`, {
                     method: "POST",
                     headers: {

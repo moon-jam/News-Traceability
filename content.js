@@ -28,7 +28,7 @@ let cert = 0;
 let generateTraceability = function() {
 
     let bodyText = document.body.innerText;
-    console.log("Body text:", bodyText);
+    // console.log("Body text:", bodyText);
     chrome.runtime.sendMessage({websiteContent: bodyText});
 
     const h1Elements = document.querySelectorAll('h1');
