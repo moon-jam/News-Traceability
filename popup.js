@@ -25,7 +25,6 @@ chrome.storage.local.get('isEnabled', function(data) {
     console.log("is enabled:", isEnabled);
     if(!isEnabled) return;
 
-    const regenerate = document.getElementById('regenerate-button');
     const outputText = document.getElementById('output-text');
 
     console.log("is enabled:", isEnabled);

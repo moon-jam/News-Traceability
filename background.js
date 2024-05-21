@@ -1,4 +1,4 @@
-let isEnabled = false;
+// let { sendMessage } = require('llm.js');
 
 async function getActiveTabUrl() {
     const tabs = await chrome.tabs.query({ active: true });
@@ -48,19 +48,20 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
 }, {url: [{schemes: ['http', 'https']}]});
 
 function processGeminiInfo(data) {
-    data = data.replace(/(\{\{|\}\})/g, '').trim();
-    let lines = data.split('\n\n').map(line => {
-        return line.replace(/(.+)([✅❌])$/, '$2 $1');
+    data = JSON.parse(data); // 將字串轉換為 JSON 陣列
+    data = data.map(line => {
+        line = String(line).trim();
+        return line.replace(/([\s\S]*)([✅❌])\s*(.*)$/, '$2 $1$3');
     });
     let info = {
-        "author": lines[0], 
-        "where": lines[1], 
+        "author": data[0], 
+        "where": data[1], 
         "when": {
-            "happen": lines[2], 
-            "report": lines[3]
+            "happen": data[2], 
+            "report": data[3]
         },
-        "source": lines[4],
-        "emotion": lines[5]
+        "source": data[4],
+        "emotion": data[5]
     };
 
     return info;
@@ -73,13 +74,13 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
         let fullUrl = url;
         chrome.storage.local.get(fullUrl, async function(result) {
             let info = result[fullUrl];
-            console.log("ori information for", fullUrl + ":", info);
+            // console.log("ori information for", fullUrl + ":", info);
             if(info){
                 let media = info.media;
-                console.log("process information for", fullUrl + ":", media);
+                // console.log("process information for", fullUrl + ":", media);
                 let dataToSave = {};
                 dataToSave[fullUrl] = {media};
-                console.log("clear information for", fullUrl + ":", dataToSave);
+                // console.log("clear information for", fullUrl + ":", dataToSave);
                 chrome.storage.local.set(dataToSave, async function() {
                     console.log('clear api info.');
                 });
@@ -95,56 +96,64 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
 
     chrome.storage.local.get('geminiApiKey', async function(result) {
         apiKey = result.geminiApiKey;
+        // let res = sendMessage(apiKey, query);
+        // if(!res.error) console.log(res.message);
     
-        const modelId = "gemini-1.0-pro";
+        const modelId = "gemini-1.5-flash-latest";
     
         if (query && apiKey) {
-            console.log("HAHA ", query);
-            const response = await fetch(`https://generativelanguage.googleapis.com/v1/models/${modelId}:generateContent`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "x-goog-api-key": apiKey,
-                },
-                body: JSON.stringify({
-                    contents: [{
-                        parts: [{ 
-                            text: query
+            getActiveTabUrl().then(async url => {
+                let fullUrl = url;
+                console.log("HAHA ", query, fullUrl);
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "x-goog-api-key": apiKey,
+                    },
+                    body: JSON.stringify({
+                        contents: [{
+                            parts: [{ 
+                                text: query
+                            }],
+                            role: "user"
                         }],
-                        role: "user"
-                    }],
-                    safetySettings: [{
-                        category: "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-                        threshold: "BLOCK_NONE"
-                    },
-                    {
-                        category: "HARM_CATEGORY_HATE_SPEECH",
-                        threshold: "BLOCK_NONE"
-                    },
-                    {
-                        category: "HARM_CATEGORY_HARASSMENT",
-                        threshold: "BLOCK_NONE"
-                    },
-                    {
-                        category: "HARM_CATEGORY_DANGEROUS_CONTENT",
-                        threshold: "BLOCK_NONE"
-                    }]
-                })
-            });
-    
-            if (response.ok) {
-                const data = await response.text();
-                const dataObj = JSON.parse(data);
-                if (dataObj && dataObj.candidates && dataObj.candidates[0] && dataObj.candidates[0].content && dataObj.candidates[0].content.parts && dataObj.candidates[0].content.parts[0]) {
-                    const text = dataObj.candidates[0].content.parts[0].text;
-                    console.log(text);
+                        safetySettings: [
+                            {
+                                category: "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                                threshold: "BLOCK_NONE"
+                            },
+                            {
+                                category: "HARM_CATEGORY_HATE_SPEECH",
+                                threshold: "BLOCK_NONE"
+                            },
+                            {
+                                category: "HARM_CATEGORY_HARASSMENT",
+                                threshold: "BLOCK_NONE"
+                            },
+                            {
+                                category: "HARM_CATEGORY_DANGEROUS_CONTENT",
+                                threshold: "BLOCK_NONE"
+                            }
+                        ],
+                        generationConfig: {
+                            "temperature": 1,
+                            "responseMimeType": "application/json",
+                            // "stopSequences": [ "}}" ]
+                        }
+                    })
+                });
+        
+                if (response.ok) {
+                    const data = await response.text();
+                    const dataObj = JSON.parse(data);
+                    if (dataObj && dataObj.candidates && dataObj.candidates[0] && dataObj.candidates[0].content && dataObj.candidates[0].content.parts && dataObj.candidates[0].content.parts[0]) {
+                        const text = dataObj.candidates[0].content.parts[0].text;
+                        console.log(text);
 
-                    content_info = processGeminiInfo(text);
-                    console.log(content_info);
-
-                    getActiveTabUrl().then(url => {
-                        let fullUrl = url;
-                    
+                        content_info = processGeminiInfo(text);
+                        console.log(content_info);
+                        
                         chrome.storage.local.get(fullUrl, async function(result) {
                             let info = result[fullUrl];
                             info = {...info, ...content_info};
@@ -155,11 +164,12 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
                                 console.log('Search information saved.');
                             });
                         });
-                    });
+                    }
+                } else {
+                    console.log('Generate Error');
+                    console.log(response);
                 }
-            } else {
-                console.log('Generate Error');
-            }
+            });
         } else {
             console.log("Please enter your API key in the options page.");
             return 'Please enter your API key in the options page.';
