@@ -48,9 +48,9 @@ let generateTraceability = function() {
         element.style.position = 'relative'; 
 
         element.addEventListener('mouseover', function() {
-            if(!document.getElementById('tooltipIframe')){
+            if(!document.getElementById('tooltipIframe-yyds1234')){
                 let iframe = document.createElement('iframe');
-                iframe.id = 'tooltipIframe';
+                iframe.id = 'tooltipIframe-yyds1234';
                 iframe.style.position = 'absolute';
                 iframe.style.width = '600px';
                 iframe.style.height = '400px';
@@ -64,7 +64,7 @@ let generateTraceability = function() {
 
         element.addEventListener('mouseout', function() {
             timeoutId = setTimeout(function() {
-                const tooltips = document.querySelectorAll('#tooltipIframe');
+                const tooltips = document.querySelectorAll('#tooltipIframe-yyds1234');
                 console.log("Tooltips:", tooltips);
                 tooltips.forEach(function(tooltip) {
                     if (!tooltip.matches(':hover')) {
@@ -124,6 +124,8 @@ let intervalId = setInterval(function() {
                             ${info.emotion ? info.emotion.replace(/\n/g, '<br>') : "Processing" + dots}
                         </div>
                     </div>
+                    <div style="margin-bottom: 0.5em;"></div>
+                    <button id="regenerate-button-yyds1234" style="width: 100%;">重新生成新聞履歷</button>
                 </div>`;   
                 if(info.author) still_loading = false;
         } else {
@@ -136,7 +138,7 @@ let intervalId = setInterval(function() {
         }   
     });
 
-    let existingIframe = document.getElementById('tooltipIframe');
+    let existingIframe = document.getElementById('tooltipIframe-yyds1234');
     if(existingIframe){
         let doc = existingIframe.contentDocument || existingIframe.contentWindow.document;
         doc.body.innerHTML = content; 
@@ -147,12 +149,17 @@ let intervalId = setInterval(function() {
         else existingIframe.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
         // console.log(cert, existingIframe.style.backgroundColor);
         doc.body.onmouseleave = function() {
-            const tooltips = document.querySelectorAll('#tooltipIframe');
+            const tooltips = document.querySelectorAll('#tooltipIframe-yyds1234');
             tooltips.forEach(function(tooltip) {
                 tooltip.remove();
             });
             console.log("Tooltip iframe removed because mouse left the iframe.");
         };
+
+        const regenerateButton = doc.getElementById('regenerate-button-yyds1234');
+        regenerateButton.addEventListener('click', function() {
+            chrome.storage.local.set({ regenerate: true });
+        });
     }
 }, 400);
 
