@@ -158,7 +158,9 @@ let intervalId = setInterval(function() {
 
         const regenerateButton = doc.getElementById('regenerate-button-yyds1234');
         regenerateButton.addEventListener('click', function() {
-            chrome.storage.local.set({ regenerate: true });
+            if(still_loading) return;
+            still_loading = true;
+            if(isEnabled) generateTraceability();
         });
     }
 }, 400);

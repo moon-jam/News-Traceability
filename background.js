@@ -51,7 +51,13 @@ function processGeminiInfo(data) {
     data = JSON.parse(data); // 將字串轉換為 JSON 陣列
     data = data.map(line => {
         line = String(line).trim();
-        return line.replace(/([\s\S]*)([✅❌])\s*(.*)$/, '$2 $1$3');
+        let match = line.match(/([✅❌])/g);
+        if (match && match.length > 0) {
+            line = line.replace(/([✅❌])/g, ''); 
+            return match[0] + ' ' + line; 
+        } else {
+            return line;
+        }
     });
     let info = {
         "author": data[0], 
