@@ -13,7 +13,8 @@ async function getCurrentTab() {
 
 toggleSwitch.addEventListener('change', async function() {
     chrome.storage.local.set({ isEnabled: toggleSwitch.checked });
-    chrome.tabs.update(getCurrentTab().id, { url: getCurrentTab().url });
+    console.log(getCurrentTab().id, getCurrentTab().url);
+    if(isEnabled) chrome.storage.local.set({ regenerate: true });
     location.reload();
 });
 
@@ -44,6 +45,8 @@ chrome.storage.local.get('isEnabled', function(data) {
             chrome.storage.local.get(currentUrl, function(result) {
                 let info = result[currentUrl];
                 if (info) {
+                    if(info.media && info.media.cert === "good") document.body.style.backgroundColor = "rgba(0, 200, 0, 0.2)";
+                    if(info.media && info.media.cert === "bad") document.body.style.backgroundColor = "rgba(200, 0, 0, 0.5)";
                     outputText.innerHTML = 
 `<span style="font-size: 20px; font-weight: bold; line-height: 2;">哪間媒體、誰的媒體？</span>
 媒體名稱: ${info.media ? info.media.name : "Processing" + dots}

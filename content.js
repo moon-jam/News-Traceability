@@ -23,7 +23,7 @@ chrome.storage.local.get('isEnabled', function(data) {
 });
 
 let content = "";
-let cert = 0;
+let cert = "normal";
 
 let generateTraceability = function() {
 
@@ -95,6 +95,7 @@ let intervalId = setInterval(function() {
         let info = result[currentUrl];
         // console.log("Information for", currentUrl + ":", info);
         if (info) {
+            if(info.media) cert = info.media.cert;
             content = 
                 `<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
                 <div style="font-family: \'Noto Sans\', sans-serif; background-color: white; padding: 5px; border: 1px solid black;">
@@ -146,10 +147,10 @@ let intervalId = setInterval(function() {
     if(existingIframe){
         let doc = existingIframe.contentDocument || existingIframe.contentWindow.document;
         doc.body.innerHTML = content; 
-        if(cert == 1)
+        if(cert == "good")
             existingIframe.style.backgroundColor = 'rgba(0, 200, 0, 0.2)';
-        else if(cert == -1)
-            existingIframe.style.backgroundColor = 'rgba(200, 0, 0, 0.2)';
+        else if(cert == "bad")
+            existingIframe.style.backgroundColor = 'rgba(200, 0, 0, 0.5)';
         else existingIframe.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
         // console.log(cert, existingIframe.style.backgroundColor);
         doc.body.onmouseleave = function() {

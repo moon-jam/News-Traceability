@@ -12,7 +12,8 @@ function generateMediaInfo() {
         let urlObj = new URL(fullUrl);
         let domain = urlObj.hostname.replace("www.", "");
         let fileURL = chrome.runtime.getURL('database/brand-info.json');
-    
+        let certFileURL = chrome.runtime.getURL('database/brand-certification.json');
+
         fetch(fileURL)
             .then(response => {
                 if (!response.ok) {
@@ -23,20 +24,32 @@ function generateMediaInfo() {
             .then(brandInfo => {
                 let brand_info = brandInfo[domain];
                 if (brand_info) {
-                    // let content_info = processGeminiInfo(generateContent(combineContentWithPrompt()));
-                    chrome.storage.local.get(fullUrl, function(result) {
-                        if (result[fullUrl] && result[fullUrl].media) {
-                            console.log('Search information already exists, not updating.');
-                        } else {
-                            let news_info = {};
-                            news_info[fullUrl] = {"media":brand_info};
-                            console.log("Information for", fullUrl + ":", news_info);
-                            
-                            chrome.storage.local.set(news_info, function() {
-                                console.log('Search information saved.');
+                    fetch(certFileURL)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(certInfo => {
+                            let cert = certInfo[brand_info.name] || "normal";
+                            chrome.storage.local.get(fullUrl, function(result) {
+                                if (result[fullUrl] && result[fullUrl].media) {
+                                    console.log('Search information already exists, not updating.');
+                                } else {
+                                    let news_info = {};
+                                    news_info[fullUrl] = {"media": {...brand_info, cert: cert}};
+                                    console.log("Information for", fullUrl + ":", news_info);
+
+                                    chrome.storage.local.set(news_info, function() {
+                                        console.log('Search information saved.');
+                                    });
+                                }
                             });
-                        }
-                    });
+                        })
+                        .catch(error => {
+                            console.error('Failed to load brand-certification.json', error);
+                        });
                 } else {
                     console.log("No brand information found for", domain);
                 }
