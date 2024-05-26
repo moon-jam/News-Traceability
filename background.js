@@ -1,12 +1,13 @@
-// let { sendMessage } = require('llm.js');
-
-async function getActiveTabUrl() {
-    const tabs = await chrome.tabs.query({ active: true });
-    return tabs[0].url;
+async function getCurrentTabUrl() {
+    const tabs = await chrome.tabs.query({ active:true });
+    const lastAccessedTab = tabs.reduce((prev, current) => {
+        return (prev.lastAccessed > current.lastAccessed) ? prev : current;
+    });
+    return lastAccessedTab.url;
 }
 
-chrome.webNavigation.onCompleted.addListener(function(details) {
-    getActiveTabUrl().then(url => {
+function generateMediaInfo() {
+    getCurrentTabUrl().then(url => {
         let fullUrl = url;
         let urlObj = new URL(fullUrl);
         let domain = urlObj.hostname.replace("www.", "");
@@ -44,8 +45,7 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
                 console.error('Failed to load brand-info.json', error);
             });
     });
-
-}, {url: [{schemes: ['http', 'https']}]});
+}
 
 function processGeminiInfo(data) {
     data = JSON.parse(data); // 將字串轉換為 JSON 陣列
@@ -76,7 +76,8 @@ function processGeminiInfo(data) {
 
 chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     if(!message.websiteContent) return;
-    getActiveTabUrl().then(url => {
+    generateMediaInfo();
+    getCurrentTabUrl().then(url => {
         let fullUrl = url;
         chrome.storage.local.get(fullUrl, async function(result) {
             let info = result[fullUrl];
@@ -108,7 +109,7 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
         const modelId = "gemini-1.5-flash-latest";
     
         if (query && apiKey) {
-            getActiveTabUrl().then(async url => {
+            getCurrentTabUrl().then(async url => {
                 let fullUrl = url;
                 // console.log("HAHA ", query, fullUrl);
                 const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent`, {
@@ -143,7 +144,7 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
                             }
                         ],
                         generationConfig: {
-                            "temperature": 1,
+                            "temperature": 0.3,
                             "responseMimeType": "application/json",
                             // "stopSequences": [ "}}" ]
                         }

@@ -51,13 +51,17 @@ let generateTraceability = function() {
             if(!document.getElementById('tooltipIframe-yyds1234')){
                 let iframe = document.createElement('iframe');
                 iframe.id = 'tooltipIframe-yyds1234';
-                iframe.style.position = 'absolute';
-                iframe.style.width = '600px';
-                iframe.style.height = '400px';
-                iframe.style.left = element.getBoundingClientRect().left + 'px';
-                iframe.style.top = (element.getBoundingClientRect().bottom + window.scrollY) + 'px';
-                iframe.style.zIndex = '99999';
-                iframe.style.border = 'none'; // 去除邊框
+                iframe.style.cssText = `
+                    all: initial;
+                    position: absolute;
+                    visibility: visible;
+                    width: 600px;
+                    height: 400px;
+                    left: ${element.getBoundingClientRect().left}px;
+                    top: ${element.getBoundingClientRect().bottom + window.scrollY}px;
+                    z-index: 2147483647;
+                    border: none;
+                `;
                 document.body.appendChild(iframe);
             }
         });

@@ -3,11 +3,17 @@ const switchLabel = document.getElementById('switch-label');
 const regenerateButton = document.getElementById('regenerate-button');
 let isEnabled = toggleSwitch.checked;
 
-toggleSwitch.addEventListener('change', function() {
-    chrome.storage.local.set({ isEnabled: toggleSwitch.checked });
-    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-        chrome.tabs.update(tabs[0].id, { url: tabs[0].url });
+async function getCurrentTab() {
+    const tabs = await chrome.tabs.query({ active:true });
+    const lastAccessedTab = tabs.reduce((prev, current) => {
+        return (prev.lastAccessed > current.lastAccessed) ? prev : current;
     });
+    return lastAccessedTab;
+}
+
+toggleSwitch.addEventListener('change', async function() {
+    chrome.storage.local.set({ isEnabled: toggleSwitch.checked });
+    chrome.tabs.update(getCurrentTab().id, { url: getCurrentTab().url });
     location.reload();
 });
 
@@ -20,6 +26,7 @@ document.getElementById("options-button").addEventListener("click", () => {
 });
 
 chrome.storage.local.get('isEnabled', function(data) {
+    if(!data.isEnabled) chrome.storage.local.set({ isEnabled: true });
     isEnabled = data.isEnabled;
     toggleSwitch.checked = isEnabled;
     console.log("is enabled:", isEnabled);
@@ -31,8 +38,8 @@ chrome.storage.local.get('isEnabled', function(data) {
     let dots = '';
     let intervalId = setInterval(function() {
         dots = (dots.length < 3) ? (dots + '.') : '.';
-        chrome.tabs.query({ active: true }, function(tabs) {
-            let currentUrl = tabs[0].url;
+        getCurrentTab().then(tab => {
+            let currentUrl = tab.url;
             // console.log("Current URL:", currentUrl);
             chrome.storage.local.get(currentUrl, function(result) {
                 let info = result[currentUrl];
