@@ -1,9 +1,14 @@
 async function getCurrentTabUrl() {
-    const tabs = await chrome.tabs.query({ active:true });
-    const lastAccessedTab = tabs.reduce((prev, current) => {
-        return (prev.lastAccessed > current.lastAccessed) ? prev : current;
+    return new Promise((resolve, reject) => {
+        chrome.windows.getLastFocused({ populate: true }, (window) => {
+            if (chrome.runtime.lastError) {
+                reject(chrome.runtime.lastError);
+            } else {
+                const activeTab = window.tabs.find(tab => tab.active);
+                resolve(activeTab.url);
+            }
+        });
     });
-    return lastAccessedTab.url;
 }
 
 function generateMediaInfo() {
@@ -124,6 +129,7 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
         if (query && apiKey) {
             getCurrentTabUrl().then(async url => {
                 let fullUrl = url;
+                console.log("fullUrl:", fullUrl);
                 // console.log("HAHA ", query, fullUrl);
                 const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent`, {
                     method: "POST",

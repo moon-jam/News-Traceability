@@ -693,13 +693,13 @@
         "name": "美洲台灣日報",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='https://taiwandaily.net/privacy-policy/' target = '_blank'>關於我們</a> (目前被下架了QAQ)",
         "score": "無調查"
     },
     "taiwantimes.com.tw": {
         "name": "臺灣時報",
-        "company": "",
-        "date": "",
+        "company": "臺灣時報社股份有限公司",
+        "date": "1971年8月25日",
         "content": "",
         "score": "無調查"
     },
@@ -712,212 +712,212 @@
     },
     "money.udn.com": {
         "name": "經濟日報",
-        "company": "",
-        "date": "",
-        "content": "",
+        "company": "聯合報股份有限公司",
+        "date": "1967年4月20日",
+        "content": "<a href='https://co.udn.com/co/index' target = '_blank'>關於我們</a>",
         "score": "51%"
     },
     "ctee.com.tw": {
         "name": "工商時報",
-        "company": "",
-        "date": "",
-        "content": "",
+        "company": "工商財經數位股份有限公司、旺旺中時媒體集團",
+        "date": "1978年12月1日",
+        "content": "<a href='https://www.ctee.com.tw/about' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "idn.com.tw": {
         "name": "自立晚報",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='https://www.idn.com.tw/aboutme.aspx' target = '_blank'>關於我們</a> (目前被下架了QAQ)",
         "score": "無調查"
     },
     "cdn.com.tw": {
         "name": "民眾日報",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "民眾網自稱是關注台灣民眾關心的大小事，從民眾的角度出發，報導民眾關心的事。反映國政輿情，聚焦財經熱點，堅持與網路上的鄉民，與馬路上的市民站在一起。",
         "score": "無調查"
     },
     "tssdnews.com.tw": {
         "name": "台灣新生報",
-        "company": "",
-        "date": "",
-        "content": "",
+        "company": "台灣新生報業股份有限公司",
+        "date": "1945年10月25日",
+        "content": "<a href='https://www.tssdnews.com.tw/?PID=4' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "epochtimes.com.tw": {
         "name": "台灣大紀元時報",
-        "company": "",
-        "date": "",
-        "content": "",
+        "company": "大紀元媒體集團",
+        "date": "2000年8月19日",
+        "content": "<a href='https://www.epochtimes.com.tw/about.htm' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "e-info.org.tw": {
         "name": "環境資訊中心",
-        "company": "",
+        "company": "社團法人台灣環境資訊協會",
         "date": "",
-        "content": "",
+        "content": "<a href='https://e-info.org.tw/about' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
-    "limedia.tw": {
+    "mdnkids.com": {
         "name": "國語日報",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='https://www.mdnkids.com/aboutMdn/' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "merit-times.com.tw": {
         "name": "人間福報",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "epaper.vac.gov.tw/admin/web": {
         "name": "榮光電子報",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "metrotimes.com.tw": {
         "name": "都會時報",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "ksnews.com.tw": {
         "name": "更生日報",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "ltsports.com.tw": {
         "name": "麗台運動報",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "mactv.com.tw": {
         "name": "僑委會宏觀新聞",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "rti.org.tw": {
         "name": "中央廣播電台",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "news.ttv.com.tw": {
         "name": "台視新聞網",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "45%"
     },
     "civilmedia.tw": {
         "name": "公民行動影音記錄資料庫",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "news.ftv.com.tw": {
         "name": "民視新聞網",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "eracom.com.tw/EraNews": {
         "name": "年代新聞",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "gotv.ctitv.com.tw": {
         "name": "中天快點TV",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "gtv.com.tw": {
         "name": "八大電視台",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "ustv.com.tw": {
         "name": "非凡新聞台",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "daai.tv": {
         "name": "大愛電視台",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "k5news68.com": {
         "name": "K5傳媒",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "coolloud.org.tw": {
         "name": "苦勞網",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "ourisland.pts.org.tw": {
         "name": "我們的島",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "wantgoo.com": {
         "name": "玩股網",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "marieclaire.com.tw": {
         "name": "美麗佳人",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "m.life.tw": {
         "name": "LIFE 生活網",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "businessweekly.com.tw": {
         "name": "商業周刊",
         "company": "",
         "date": "",
-        "content": "",
+        "content": "<a href='' target = '_blank'>關於我們</a>",
         "score": "55%"
     }
 }
