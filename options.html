@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Gemini Extension Options</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="options.css">
 </head>
 <body>
   <div id="options-container">
-    <h2>Gemini API Settings</h2>
+    <h2>設定 Gemini API</h2>
     <label for="api-key">API Key:</label>
-    <input type="text" id="api-key" placeholder="Enter your Gemini API key">
-    <button id="save-button">Save Settings</button>
+    <input type="text" id="api-key" placeholder="請輸入你的 Gemini API key">
+    <button id="save-button">儲存</button>
+    <div class="spinner" id="spinner"></div>
+    <div class="status-icon" id="status-icon"></div>
+    <div id="message"></div>
   </div>
   <br>
-  <span>You can get Gemini AspanI key at this </span>
-  <a href="https://aistudio.google.com/app/apikey" target="_blank">page.</a>
+  <span>你可以在 <a href="https://aistudio.google.com/app/apikey" target="_blank">這裡</a> 取得 Gemini API key ， <a href="https://aistudio.google.com/app/apikey" target="_blank">此處</a> 有詳細使用說明 </span>
 
   <script src="options.js"></script>
 </body>

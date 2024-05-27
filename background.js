@@ -1,3 +1,9 @@
+chrome.runtime.onInstalled.addListener((details) => {
+    if (details.reason === 'install') {
+        chrome.runtime.openOptionsPage();
+    }
+});  
+
 async function getCurrentTabUrl() {
     return new Promise((resolve, reject) => {
         chrome.windows.getLastFocused({ populate: true }, (window) => {

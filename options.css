@@ -1,0 +1,42 @@
+.spinner {
+  display: none;
+  width: 10pt;
+  height: 10pt;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.status-icon {
+  display: none;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.status-icon.success::after {
+  content: '✅';
+}
+
+.status-icon.error::after {
+  content: '❌';
+}
+
+#message {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#message.success {
+  color: green;
+}
+
+#message.error {
+  color: red;
+}

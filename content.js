@@ -104,7 +104,7 @@ let intervalId = setInterval(function() {
                     `<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
                     <div style="font-family: \'Noto Sans\', sans-serif; background-color: white; padding: 5px; border: 1px solid black;">
                         <div style="text-align: center; margin-bottom: 10px;">
-                            <span style="font-size: 24px; font-weight: bold; line-height: 2;"><a href="https://github.com/moon-jam/News-Traceability" target="_blank">新聞產銷履歷</a></span>
+                            <span style="font-size: 24px; font-weight: bold; line-height: 2;"><a href="https://github.com/moon-jam/News-Traceability#新聞產銷履歷" target="_blank">新聞產銷履歷 - 簡介及使用說明</a></span>
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                             <div style="flex: 1; padding: 10px; border-right: 1px solid #ccc;">
@@ -143,7 +143,7 @@ let intervalId = setInterval(function() {
                             `<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
                             <div style="font-family: \'Noto Sans\', sans-serif; background-color: white; padding: 5px; border: 1px solid black;">
                                 <div style="text-align: center; margin-bottom: 10px;">
-                                    <span style="font-size: 24px; font-weight: bold; line-height: 2;"><a href="https://github.com/moon-jam/News-Traceability" target="_blank">新聞產銷履歷</a></span>
+                                    <span style="font-size: 24px; font-weight: bold; line-height: 2;"><a href="https://github.com/moon-jam/News-Traceability#新聞產銷履歷" target="_blank">新聞產銷履歷 - 簡介及使用說明</a></span>
                                 </div>
                                 <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                                     <div style="flex: 1; padding: 10px; border-right: 1px solid #ccc;">
@@ -195,11 +195,12 @@ let intervalId = setInterval(function() {
             console.log("Tooltip iframe removed because mouse left the iframe.");
         };
         let regenerateButton = doc.getElementById('regenerate-button-yyds1234');
-        regenerateButton.addEventListener('click', function() {
-            if(still_loading) return;
-            still_loading = true;
-            if(isEnabled) generateTraceability();
-        });
+        if(regenerateButton)
+            regenerateButton.addEventListener('click', function() {
+                if(still_loading) return;
+                still_loading = true;
+                if(isEnabled) generateTraceability();
+            });
     }
     last_content = content;
 }, 400);
