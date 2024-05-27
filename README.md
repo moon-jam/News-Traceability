@@ -16,6 +16,7 @@
 - [x] 新聞事發的地點？
 
 還能利用AI判讀是否有煽動情緒用字、媒體黑/白名單（以紅、綠色表示），讓使用者可以快速判斷新聞的可信度。  
+
 實際使用畫面如下，將滑鼠移動到標題或是點選extension圖標即可顯示新聞履歷：
 ![image](./docs/assets/劉容安／二戰大時代下，台灣畫壇《戰爭中的美術》是「黑歷史」嗎？.png)
 ![image](./docs/assets/趕快試試看！「把洗衣粉倒進馬桶」神奇效果曝：比浴廁清潔劑好用.png)
@@ -33,20 +34,20 @@
 
 2. (可選) 可點擊視窗右上角的插件圖示，即會顯示新聞履歷的圖標，可將其釘選在瀏覽器上方，方便使用。
 
-    ![image](image.png)
+    ![image](docs/assets/step-7.png)
 
 3. 點擊圖標，會顯示一個方框，將由上角的開關開啟
 
-    ![image](image-1.png)
+    ![image](docs/assets/step-8.png)
 
 4. 重新載入新聞網頁，將滑鼠移動到標題或是點選extension圖標即可顯示新聞履歷
 
-    ![將滑鼠移動到標題](image-2.png)
-    ![點選extension圖標](image-3.png)
+    ![將滑鼠移動到標題](docs/assets/step-9.png)
+    ![點選extension圖標](docs/assets/step-10.png)
 
 5. 點擊標題或extension圖標方框最下方的重新生成新聞履歷，即可重新生成
 
-    ![image](image-4.png)
+    ![image](docs/assets/step-11.png)
 
 > 方框顏色會根據[黑白名單](./database/brand-certification.json)顯示 (參照記者真心話中的推薦名單) ，紅色表示黑名單，綠色表示白名單，灰色表示未列入名單
 
