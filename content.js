@@ -109,7 +109,7 @@ let intervalId = setInterval(function() {
                             所屬公司: ${info.media ? info.media.company.replace(/\n/g, '<br>') : "Processing" + dots}<br>
                             上線日期: ${info.media ? info.media.date.replace(/\n/g, '<br>') : "Processing" + dots}<br>
                             相關訊息: ${info.media ? info.media.content.replace(/\n/g, '<br>') : "Processing" + dots}<br>
-                            可信度分數: ${info.media ? info.media.score.replace(/\n/g, '<br>') : "Processing" + dots}<br>
+                            <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2023/taiwan" target="_blank">可信度分數</a>: ${info.media ? info.media.score.replace(/\n/g, '<br>') : "Processing" + dots}<br>
                             <br>
                             <span style="font-size: 20px; font-weight: bold; line-height: 2;">誰寫的報導？</span><br>
                             ${info.author ? info.author.replace(/\n/g, '<br>') : "Processing" + dots}<br>

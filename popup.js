@@ -53,7 +53,7 @@ chrome.storage.local.get('isEnabled', function(data) {
 所屬公司: ${info.media ? info.media.company : "Processing" + dots}
 上線日期: ${info.media ? info.media.date : "Processing" + dots}
 相關訊息: ${info.media ? info.media.content : "Processing" + dots}
-可信度分數: ${info.media ? info.media.score : "Processing" + dots}
+<a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2023/taiwan" target="_blank">可信度分數</a>: ${info.media ? info.media.score : "Processing" + dots}
 
 <span style="font-size: 20px; font-weight: bold; line-height: 2;">誰寫的報導？</span>
 ${info.author ? info.author : "Processing" + dots}
