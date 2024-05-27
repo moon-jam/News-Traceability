@@ -13,7 +13,7 @@ saveButton.addEventListener('click', async () => {
   message.style.display = 'none';
 
   if (await checkApiKey(apiKey)) {
-    chrome.storage.local.set({'geminiApiKey': apiKey, 'regenerate': true}, function() {
+    chrome.storage.local.set({'geminiApiKey': apiKey, 'isEnabled': true}, function() {
       // 顯示綠色打勾和成功訊息
       statusIcon.className = 'status-icon success';
       message.className = 'success';

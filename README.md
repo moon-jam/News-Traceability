@@ -36,11 +36,11 @@
 
     ![image](docs/assets/step-7.png)
 
-3. 點擊圖標，會顯示一個方框，將由上角的開關開啟
+3. 點擊圖標，會顯示一個方框，如需關閉此功能，可點擊右上角的開關
 
     ![image](docs/assets/step-8.png)
 
-4. 重新載入新聞網頁，將滑鼠移動到標題或是點選extension圖標即可顯示新聞履歷
+4. 載入新聞網頁後，將滑鼠移動到標題或是點選extension圖標即可顯示新聞履歷
 
     ![將滑鼠移動到標題](docs/assets/step-9.png)
     ![點選extension圖標](docs/assets/step-10.png)
