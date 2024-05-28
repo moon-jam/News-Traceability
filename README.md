@@ -23,7 +23,7 @@
 
 ## 使用說明
 
-1. 安裝軟體後會跳到 option 頁面，先到 [Google AI Studio](https://aistudio.google.com/app/apikey) 建立 API Key (如下圖)，接著將 API Key 輸入後按儲存即可使用。
+1. 安裝軟體後會跳到 option 頁面，先到 [Google AI Studio](https://aistudio.google.com/app/apikey) 建立 API Key (如下圖)，接著將 API Key 輸入後按儲存即可使用
 
     ![到 [Google AI Studio](https://aistudio.google.com/app/apikey) 建立 API Key - 1](docs/assets/step-1.png)
     ![到 [Google AI Studio](https://aistudio.google.com/app/apikey) 建立 API Key - 2](docs/assets/step-2.png)
@@ -32,11 +32,11 @@
     ![到 [Google AI Studio](https://aistudio.google.com/app/apikey) 建立 API Key - 5](docs/assets/step-5.png)
     ![將 API Key 輸入後按儲存](docs/assets/step-6.png)
 
-2. (可選) 可點擊視窗右上角的插件圖示，即會顯示新聞履歷的圖標，可將其釘選在瀏覽器上方，方便使用。
+2. (可選) 可點擊視窗右上角的插件圖示，即會顯示新聞履歷的圖標，可將其釘選在瀏覽器上方，方便使用
 
     ![image](docs/assets/step-7.png)
 
-3. 點擊圖標，會顯示一個方框，如需關閉此功能，可點擊右上角的開關
+3. 點擊圖標，會顯示一個方框，如需關閉此插件，可點擊右上角的開關，點擊後會自動重新載入網頁
 
     ![image](docs/assets/step-8.png)
 
@@ -70,4 +70,4 @@
 
 ## License
 
-本專案採用 [MIT LICENSE](LICENSE)。
+本專案採用 [MIT LICENSE](LICENSE)

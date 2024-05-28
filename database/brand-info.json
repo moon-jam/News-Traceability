@@ -635,14 +635,14 @@
         "name": "每日頭條",
         "company": "",
         "date": "",
-        "content": "<",
+        "content": "",
         "score": "無調查"
     },
     "read01.com": {
         "name": "壹讀",
         "company": "",
         "date": "",
-        "content": "<",
+        "content": "",
         "score": "無調查"
     },
     "readnews.tw": {
@@ -761,163 +761,149 @@
     },
     "mdnkids.com": {
         "name": "國語日報",
-        "company": "",
-        "date": "",
+        "company": "財團法人國語日報社",
+        "date": "1948年10月25日",
         "content": "<a href='https://www.mdnkids.com/aboutMdn/' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "merit-times.com.tw": {
         "name": "人間福報",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "人間福報社股份有限公司",
+        "date": "2000年4月1日",
+        "content": "《人間福報》自稱是一份多元化報紙，致力於推動祥和社會、淨化人心，關懷弱勢族群，強調內容溫馨、健康、益智、環保，承擔社會責任，自許為「社會的一道光明」。",
         "score": "無調查"
     },
-    "epaper.vac.gov.tw/admin/web": {
+    "epaper.vac.gov.tw": {
         "name": "榮光電子報",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "國軍退除役官兵輔導委員會",
+        "date": "2004年 12月 06日",
+        "content": "",
         "score": "無調查"
     },
     "metrotimes.com.tw": {
         "name": "都會時報",
         "company": "",
         "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "content": "",
         "score": "無調查"
     },
     "ksnews.com.tw": {
         "name": "更生日報",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "更生日報社股份有限公司",
+        "date": "1947年9月3日",
+        "content": "",
         "score": "無調查"
     },
     "ltsports.com.tw": {
         "name": "麗台運動報",
-        "company": "",
+        "company": "麗台育樂傳播股份有限公司",
         "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
-        "score": "無調查"
-    },
-    "mactv.com.tw": {
-        "name": "僑委會宏觀新聞",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "content": "",
         "score": "無調查"
     },
     "rti.org.tw": {
         "name": "中央廣播電台",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "中華民國政府",
+        "date": "1928年8月1日",
+        "content": "<a href='https://www.rti.org.tw/index/content/id/4#:~:text=%E4%BB%A3%E8%A1%A8%E8%87%BA%E7%81%A3%E5%90%91%E5%9C%8B%E9%9A%9B%E5%BB%A3%E6%92%AD,%E9%9D%A2%E8%B2%8C%E7%B5%A6%E5%85%A8%E7%90%83%E8%81%BD%E7%B6%B2%E5%8F%8B%E3%80%82' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "news.ttv.com.tw": {
         "name": "台視新聞網",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "臺灣電視事業股份有限公司",
+        "date": "1962年10月10日",
+        "content": "台視新聞是台灣電視公司製播的新聞節目，開播於1962年，以報導台灣及國際新聞為主。節目涵蓋晨間、午間及晚間時段，並製作特別報導及財經新聞，享有新聞王國的美譽。",
         "score": "45%"
     },
     "civilmedia.tw": {
-        "name": "公民行動影音記錄資料庫",
+        "name": "公民行動影音紀錄資料庫",
         "company": "",
         "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "content": "<a href='https://www.civilmedia.tw/about' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "news.ftv.com.tw": {
         "name": "民視新聞網",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "民間全民電視公司",
+        "date": "1997年5月5日",
+        "content": "<a href='https://www.ftv.com.tw/aboutftv.aspx' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
-    "eracom.com.tw/EraNews": {
+    "eracom.com.tw": {
         "name": "年代新聞",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
-        "score": "無調查"
-    },
-    "gotv.ctitv.com.tw": {
-        "name": "中天快點TV",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "練台生、年代網際事業股份有限公司",
+        "date": "1996年10月",
+        "content": "<a href='https://www.eracom.com.tw/EraNews/About/2018-11-14/6917.html' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "gtv.com.tw": {
         "name": "八大電視台",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "八大電視股份有限公司",
+        "date": "1997年6月13日",
+        "content": "<a href='https://www.gtv.com.tw/about.php?name=about' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "ustv.com.tw": {
         "name": "非凡新聞台",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "飛凡傳播股份有限公司",
+        "date": "1997年",
+        "content": "<a href='https://www.ustv.com.tw/about' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "daai.tv": {
         "name": "大愛電視台",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "慈濟傳播人文志業基金會",
+        "date": "1998年1月1日",
+        "content": "<a href='https://friends.daai.tv/' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "k5news68.com": {
         "name": "K5傳媒",
         "company": "",
         "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "content": "",
         "score": "無調查"
     },
     "coolloud.org.tw": {
         "name": "苦勞網",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "台灣勞工資訊教育協會",
+        "date": "1997年",
+        "content": "<a href='https://zh.wikipedia.org/wiki/%E8%8B%A6%E5%8B%9E%E7%B6%B2' target = '_blank'>Wiki</a>",
         "score": "無調查"
     },
     "ourisland.pts.org.tw": {
         "name": "我們的島",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "財團法人公共電視文化事業基金會",
+        "date": "1998年11月1日",
+        "content": "<a href='https://ourisland.pts.org.tw/about' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "wantgoo.com": {
         "name": "玩股網",
-        "company": "",
+        "company": "玩股網有限公司",
         "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "content": "<a href='https://www.wantgoo.com/about' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "marieclaire.com.tw": {
         "name": "美麗佳人",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "Groupe Marie Claire",
+        "date": "一九五四年",
+        "content": "<a href='https://www.marieclaire.com.tw/about#:~:text=%E7%BE%8E%E9%BA%97%E4%BD%B3%E4%BA%BA%E9%9B%9C%E8%AA%8C%EF%BC%8C%E6%96%BC%E4%B8%80,%E9%8B%AA%E6%9B%B8%E8%B6%85%E9%81%8E12080%E9%BB%9E%E3%80%82' target = '_blank'>關於我們</a>",
         "score": "無調查"
     },
     "m.life.tw": {
         "name": "LIFE 生活網",
         "company": "",
         "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "content": "",
         "score": "無調查"
     },
     "businessweekly.com.tw": {
         "name": "商業周刊",
-        "company": "",
-        "date": "",
-        "content": "<a href='' target = '_blank'>關於我們</a>",
+        "company": "商周集團",
+        "date": "1987年11月",
+        "content": "<a href='https://www.businessweekly.com.tw/aboutus/index' target = '_blank'>關於我們</a>",
         "score": "55%"
     }
 }

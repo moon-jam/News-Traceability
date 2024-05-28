@@ -18,7 +18,7 @@ async function getCurrentTabUrl() {
 }
 
 function generateMediaInfo() {
-    getCurrentTabUrl().then(url => {
+    getCurrentTabUrl().then(async (url) => {
         let fullUrl = url;
         let urlObj = new URL(fullUrl);
         let domain = urlObj.hostname.replace("www.", "");

@@ -215,13 +215,17 @@ let intervalId = setInterval(function() {
 // });
 
 setInterval(function() {
-    chrome.storage.local.get('regenerate', function(data) {
+    chrome.storage.local.get('regenerate', async function(data) {
         if(data.regenerate){
             console.log("Regenerate!");
             chrome.storage.local.set({ regenerate: false });
             if(still_loading) return;
             still_loading = true;
-            if(isEnabled) generateTraceability();
+            chrome.storage.local.get('isEnabled', function(data) {
+                console.log("is enabled:", data.isEnabled);
+                isEnabled = data.isEnabled;
+                if(isEnabled) generateTraceability();
+            });
         }
     });
 }, 100); 
