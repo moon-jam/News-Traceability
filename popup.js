@@ -46,7 +46,8 @@ chrome.storage.local.get('isEnabled', function(data) {
 
     console.log("is enabled:", isEnabled);
     let dots = '';
-    let intervalId = setInterval(function() {
+    let intervalId = setInterval(async function() {
+        if(chrome.storage.local.get('regenerate')) still_loading = true;
         dots = (dots.length < 3) ? (dots + '.') : '.';
         if(!still_loading) return;
         getCurrentTab().then(tab => {
@@ -80,7 +81,6 @@ ${info.where ? info.where : "Processing" + dots}
 
 <span style="font-size: 20px; font-weight: bold; line-height: 2;">是否煽動閱聽人情緒？</span>
 ${info.emotion ? info.emotion : "Processing" + dots}`;
-
                     if(info.author) {
                         still_loading = false;
                         if(!info.media)

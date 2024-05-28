@@ -19,6 +19,11 @@ async function getCurrentTabUrl() {
 
 function generateMediaInfo() {
     getCurrentTabUrl().then(async (url) => {
+        if(!url){
+            setTimeout(generateMediaInfo, 500);
+            console.log('No URL found, retrying...', url);
+            return;
+        }
         let fullUrl = url;
         let urlObj = new URL(fullUrl);
         let domain = urlObj.hostname.replace("www.", "");
@@ -135,7 +140,6 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
         if (query && apiKey) {
             getCurrentTabUrl().then(async url => {
                 let fullUrl = url;
-                console.log("fullUrl:", fullUrl);
                 // console.log("HAHA ", query, fullUrl);
                 const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent`, {
                     method: "POST",
