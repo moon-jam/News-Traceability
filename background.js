@@ -22,8 +22,8 @@ function generateMediaInfo() {
         let fullUrl = url;
         let urlObj = new URL(fullUrl);
         let domain = urlObj.hostname.replace("www.", "");
-        let fileURL = chrome.runtime.getURL('database/brand-info.json');
-        let certFileURL = chrome.runtime.getURL('database/brand-certification.json');
+        let fileURL = 'https://raw.githubusercontent.com/moon-jam/News-Traceability/main/database/brand-info.json';
+        let certFileURL = 'https://raw.githubusercontent.com/moon-jam/News-Traceability/main/database/brand-certification.json';
 
         fetch(fileURL)
             .then(response => {
