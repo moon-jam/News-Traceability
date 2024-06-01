@@ -92,8 +92,8 @@ function processGeminiInfo(data) {
         "author": data[0], 
         "where": data[1], 
         "when": {
-            "happen": data[2], 
-            "report": data[3]
+            "report": data[2],
+            "happen": data[3] 
         },
         "source": data[4],
         "emotion": data[5]
