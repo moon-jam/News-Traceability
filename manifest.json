@@ -2,7 +2,7 @@
     "name": "新聞產銷履歷",
     "description": "快速瀏覽新聞的媒體資訊、作者資訊、消息來源、事發時間、地點、用詞是否煽動情緒，以確保新聞的品質。",
     "manifest_version": 3,
-    "version": "1.0.1",
+    "version": "1.0.2",
     "permissions": ["storage"],
     "host_permissions": ["<all_urls>"],
     "background": {
