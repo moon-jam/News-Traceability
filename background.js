@@ -188,6 +188,15 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
                         console.log(text);
 
                         content_info = processGeminiInfo(text);
+                        for (let key in content_info) {
+                            if (content_info[key] && typeof content_info[key] === "string")
+                                content_info[key] = sanitizeHTML(content_info[key]);
+                            else 
+                                for (let subkey in content_info[key]) {
+                                    if (content_info[key][subkey] && typeof content_info[key][subkey] === "string")
+                                        content_info[key][subkey] = sanitizeHTML(content_info[key][subkey]);
+                                }
+                        }
                         console.log(content_info);
                         
                         chrome.storage.local.get(fullUrl, async function(result) {
@@ -212,3 +221,12 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
         }
     });
 });
+
+function sanitizeHTML(unsafe) {
+    return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
