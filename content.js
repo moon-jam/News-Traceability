@@ -84,6 +84,18 @@ let generateTraceability = function() {
     });
 };
 
+function appendWithLineBreaks(container, text) {
+    if (!text) return;
+    text.split('\n').forEach((line, index, arr) => {
+        const textNode = document.createTextNode(line);
+        container.appendChild(textNode);
+        if (index < arr.length - 1) {
+            const br = document.createElement('br');
+            container.appendChild(br);
+        }
+    });
+}
+
 let dots = '.';
 let intervalId = setInterval(function() {
     dots = (dots.length < 3) ? (dots + '.') : '.';
@@ -186,7 +198,7 @@ let intervalId = setInterval(function() {
                     leftContent.appendChild(authorInfo);
         
                     const authorDetails = document.createElement('div');
-                    authorDetails.textContent = info.author || "Processing" + dots;
+                    appendWithLineBreaks(authorDetails, info.author || "Processing" + dots);
                     leftContent.appendChild(authorDetails);
         
                     const sourceInfo = document.createElement('div');
@@ -195,7 +207,7 @@ let intervalId = setInterval(function() {
                     leftContent.appendChild(sourceInfo);
         
                     const sourceDetails = document.createElement('div');
-                    sourceDetails.textContent = info.source || "Processing" + dots;
+                    appendWithLineBreaks(sourceDetails, info.source || "Processing" + dots);
                     leftContent.appendChild(sourceDetails);
         
                     mainContent.appendChild(leftContent);
@@ -210,9 +222,9 @@ let intervalId = setInterval(function() {
                     rightContent.appendChild(timeInfo);
         
                     const timeDetails = document.createElement('div');
-                    timeDetails.textContent = info.when
-                        ? `${info.when.happen || "Processing" + dots} ${info.when.report || "Processing" + dots}`
-                        : "Processing" + dots;
+                    appendWithLineBreaks(timeDetails, info.when
+                        ? `${info.when.happen || "Processing" + dots}\n${info.when.report || "Processing" + dots}`
+                        : "Processing" + dots);
                     rightContent.appendChild(timeDetails);
         
                     const locationInfo = document.createElement('div');
@@ -221,7 +233,7 @@ let intervalId = setInterval(function() {
                     rightContent.appendChild(locationInfo);
         
                     const locationDetails = document.createElement('div');
-                    locationDetails.textContent = info.where || "Processing" + dots;
+                    appendWithLineBreaks(locationDetails, info.where || "Processing" + dots);
                     rightContent.appendChild(locationDetails);
         
                     const emotionInfo = document.createElement('div');
@@ -230,7 +242,7 @@ let intervalId = setInterval(function() {
                     rightContent.appendChild(emotionInfo);
         
                     const emotionDetails = document.createElement('div');
-                    emotionDetails.textContent = info.emotion || "Processing" + dots;
+                    appendWithLineBreaks(emotionDetails, info.emotion || "Processing" + dots);
                     rightContent.appendChild(emotionDetails);
         
                     mainContent.appendChild(rightContent);
