@@ -172,7 +172,7 @@ let intervalId = setInterval(function() {
                         leftContent.appendChild(date);
         
                         const content = document.createElement('div');
-                        content.textContent = `相關訊息: ${info.media.content || "Processing" + dots}`;
+                        content.innerHTML = `相關訊息: ${info.media.content || "Processing" + dots}`;
                         leftContent.appendChild(content);
         
                         const credibilityLink = document.createElement('a');

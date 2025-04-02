@@ -135,7 +135,7 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
         // let res = sendMessage(apiKey, query);
         // if(!res.error) console.log(res.message);
     
-        const modelId = "gemini-1.5-flash-latest";
+        const modelId = "gemini-2.0-flash";
     
         if (query && apiKey) {
             getCurrentTabUrl().then(async url => {
