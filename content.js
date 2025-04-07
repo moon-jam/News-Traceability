@@ -160,25 +160,23 @@ let intervalId = setInterval(function() {
         
                     if (info.media) {
                         const mediaName = document.createElement('div');
-                        mediaName.textContent = `媒體名稱: ${info.media.name || "Processing" + dots}`;
+                        mediaName.textContent = `媒體名稱: ${info.media.name || "資料庫中無收錄"}`;
                         leftContent.appendChild(mediaName);
         
                         const companyName = document.createElement('div');
-                        companyName.textContent = `所屬公司: ${info.media.company || "Processing" + dots}`;
+                        companyName.textContent = `所屬公司: ${info.media.company || "資料庫中無收錄"}`;
                         leftContent.appendChild(companyName);
         
                         const date = document.createElement('div');
-                        date.textContent = `上線日期: ${info.media.date || "Processing" + dots}`;
+                        date.textContent = `上線日期: ${info.media.date || "資料庫中無收錄"}`;
                         leftContent.appendChild(date);
         
                         const content = document.createElement('div');
-                        content.innerHTML = `相關訊息: ${info.media.content || "Processing" + dots}`;
+                        content.innerHTML = `相關訊息: ${info.media.content || "資料庫中無收錄"}`;
                         leftContent.appendChild(content);
         
-                        const credibilityLink = document.createElement('a');
-                        credibilityLink.href = "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2023/taiwan";
-                        credibilityLink.target = "_blank";
-                        credibilityLink.textContent = "可信度分數";
+                        const credibilityLink = document.createElement('div');
+                        credibilityLink.innerHTML = `<a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2023/taiwan" target="_blank">可信度分數</a>: ${info.media.score || "資料庫中無收錄"}`;
                         leftContent.appendChild(credibilityLink);
                     } else {
                         const warning = document.createElement('div');

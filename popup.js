@@ -60,11 +60,11 @@ chrome.storage.local.get('isEnabled', function(data) {
                     if(info.media && info.media.cert === "bad") document.body.style.backgroundColor = "rgba(200, 0, 0, 0.5)";
                     outputText.innerHTML = 
 `<span style="font-size: 20px; font-weight: bold; line-height: 2;">哪間媒體、誰的媒體？</span>
-媒體名稱: ${info.media ? info.media.name : "Processing" + dots}
-所屬公司: ${info.media ? info.media.company : "Processing" + dots}
-上線日期: ${info.media ? info.media.date : "Processing" + dots}
-相關訊息: ${info.media ? info.media.content : "Processing" + dots}
-<a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2023/taiwan" target="_blank">可信度分數</a>: ${info.media ? info.media.score : "Processing" + dots}
+媒體名稱: ${info.media.name || "資料庫中無收錄"}
+所屬公司: ${info.media.company || "資料庫中無收錄"}
+上線日期: ${info.media.date || "資料庫中無收錄"}
+相關訊息: ${info.media.content || "資料庫中無收錄"}
+<a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2023/taiwan" target="_blank">可信度分數</a>: ${info.media.score || "資料庫中無收錄"}
 
 <span style="font-size: 20px; font-weight: bold; line-height: 2;">誰寫的報導？</span>
 ${info.author ? info.author : "Processing" + dots}
